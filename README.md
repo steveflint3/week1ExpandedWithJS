@@ -14,7 +14,7 @@ that will add this information to the table.
 You will also create a button that will toggle between showing a photo and a video clip
 of your celebrity on youtube.  
 
-Tips:
+### Tips:
 Remember your sanity check!  It is always important to make sure that your files are
 communicating.  Make sure that your script and html files are communicating by creating
 a simple function with an alert.
