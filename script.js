@@ -1,43 +1,61 @@
-const videoButton = document.getElementById("videoButton");
-const seagalPic = document.getElementById("seagalPic");
-//create celebrityVideo, table Button, movieTable, titleInput, yearInput and trivia variables for DOM manipulation using above code as reference
+const trivia = document.getElementById('trivia');
+const videoButton = document.getElementById('videoButton');
+const seagalPic = document.getElementById('seagalPic');
+const seagalVideo = document.getElementById('seagalVideo');
+const tableButton = document.getElementById('tableButton');
+const movieTable = document.getElementById('movieTable');
+const titleInput = document.getElementById('titleInput');
+const yearInput = document.getElementById('yearInput');
+const hitMe = document.getElementById('hitMe');
 
-
-triviaFunc = () => {
-  alert("Please enter the letter for the corresponding answer.");
-  const value1 = prompt("What was Steven Seagal's first movie?   a: Above the Law, b: Under Siege, c: The Glimmer Man");
-  if(value1 === "a"){
-    alert("You got it right!");
+function clickCounter() {
+  if (typeof Storage !== 'undefined') {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount) + 1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById('result').innerHTML =
+      'You have clicked the button ' + localStorage.clickcount + ' time(s).';
   } else {
-    alert("Incorrect, Please try again.")
-    triviaFunc();
+    document.getElementById('result').innerHTML = 'Sorry, your browser does not support web storage...';
   }
-
-  const value2 = prompt("How old is Steven Seagal?   a: 57, b: 72, c: 65" );
-  //use value collected from prompt, if else statements, operators, and alerts to handle trivia question
-
-  const value3 = prompt("What 2 martial arts forms does Seagal know? a: Akido, b: Muay Thai, c: Boxing, d: Judo");
-  //use value collected from prompt, if else statements, operators, and alerts to handle trivia question
-
 }
 
-trivia.addEventListener("click", function(){
-//call triviaFunc
+triviaFunc = () => {
+  alert('Please enter the letter for the corresponding value');
+  const value1 = prompt(
+    "What was Steven Seagal's first movie? a: Above the Law, b: Under Siege, c; The Glimmer Man"
+  );
+
+  if (value1 === 'a') {
+    alert('You got it right');
+  } else {
+    alert('Incorrect, Please try again.');
+  }
+
+  const value2 = prompt('How old is Seagal? a: 57, b: 72, c: 65');
+
+  if (value2 === 'c') {
+    alert('you got it right');
+  } else {
+    alert('You got it wrong');
+  }
+};
+
+trivia.addEventListener('click', function() {
+  triviaFunc();
 });
 
-videoButton.addEventListener("click", function(){
-//toggle celebrityPic and celebrityVideo classes with button functionality
+videoButton.addEventListener('click', function() {
+  seagalPic.classList.toggle('displayClass');
+  seagalVideo.classList.toggle('displayClass');
 });
 
-tableButton.addEventListener("click", function(){
+tableButton.addEventListener('click', function() {
   const row = movieTable.insertRow(1);
   const cell1 = row.insertCell(0);
-  // create variable to insert new cell similar to code above
+  const cell2 = row.insertCell(1);
   cell1.innerHTML = titleInput.value;
-  // add yearInput value to cell you just created
-  //call resetInputValues function;
+  cell2.innerHTML = yearInput.value;
 });
-
-resetInputValues = () => {
-  //define function to reset input values
-};

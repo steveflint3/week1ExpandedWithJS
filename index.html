@@ -1,62 +1,49 @@
 <!DOCTYPE HTML>
 <html>
 
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-    <link rel=stylesheet href="src/css/style.css" type="text/css"/>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous" />
+  <link rel=stylesheet href="style.css" type="text/css" />
 
-    <title>academy</title>
-  </head>
-  <style>
-  #celebrityName {
-    //center your text
-    //set text color
-  }
-  table, th, td {
-    //set your background-color,
-    border: 1px solid black;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  #celebrityPic {
-    //set your height and width to match with video
-  }
-  .displayClass{
-    display: none;
-  }
-  #link {
-    //center your link
-  }
-  .date {
-    //center the date
-  }
-  .centerClass {
-    //block of code for centering certain elements.  This can be applied to elements you add this class to.
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  body {
-    //set background-color
-  }
-  </style>
-  <body>
-    <h2>Celebrity Name</h2>
-    <div><button class="centerClass" id="trivia">Play Trivia</button></div>
-    <center>img tag with appropriate id assignment and src='your photo url here'</center>
-    <center><iframe id="seagalVideo" use displayClass to center this element width="315" height="420" src="youtube video url" frameborder="0" gesture="media" allowfullscreen></iframe></center>
-    <button class="centerClass" set button id>Picture Video Toggle</button>
-    <h4 id="link"><a href="link to wikipedia page">your celebrity on Wikipedia</h4></a>
-    <table id="movieTable">
-      \\use table row tags <tr> table head tags <th> and table data tags <td> to create a table
-    </table>
-    <input class="centerClass" id="titleInput" placeholder="title"></input>
-    <input class="centerClass" id="yearInput" placeholder="year"></input>
-    <button class="centerClass" id="tableButton">Add Movie to Table</button>
-    <h3 class="date"><input class="date" type="date" /></h3>
-  </body>
-  <script src="script.js"></script>
+  <title>academy</title>
+</head>
+
+<body>
+  <h2>Stephen Seagal</h2>
+  <div><button class="centerClass" id="trivia">Play Trivia</button></div>
+  <center><img id="seagalPic" src="http://cdn.newsapi.com.au/image/v1/0be7befc1e4becfa62fe7cd34657601d" /></center>
+  <iframe width="854" id="seagalVideo" class="displayClass" height="480" src="https://www.youtube.com/embed/7EAuLL9n42s"
+    frameborder="0" allowfullscreen></iframe>
+  <button class="centerClass" id="videoButton">Picture Video Toggle</button>
+  <center>
+    <h4 id="link"><a href="https://en.wikipedia.org/wiki/Steven_Seagal">your celebrity on Wikipedia</h4></a>
+  </center>
+  <table id="movieTable">
+
+    <tr>
+      <th>Movie Title</th>
+      <th>Year</th>
+    </tr>
+    <tr>
+      <td>Under Siege</td>
+      <td>1991</td>
+    </tr>
+    <tr>
+      <td>The Glimmer Man</td>
+      <td>1998</td>
+
+    </tr>
+
+  </table>
+  <input class="centerClass" id="titleInput" placeholder="title"></input>
+  <input class="centerClass" id="yearInput" placeholder="year"></input>
+  <button class="centerClass" id="tableButton">Add Movie to Table</button>
+  <h3 class="date"><input class="date" type="date" /></h3>
+</body>
+<script src="script.js"></script>
+
 </html>

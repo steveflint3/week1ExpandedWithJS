@@ -1,0 +1,57 @@
+.listItem {
+  /* background-color: #3346FF;
+    color: lightgreen;
+    font-family: papyrus;
+    text-transform: uppercase;
+    margin-top: 100%; */
+  width: 300px;
+  border: 25px solid green;
+  padding: 25px;
+  margin: 25px;
+}
+#celebrityName {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+table,
+th,
+td {
+  background-color: lightblue;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* #celebrityPic {
+    //set your height and width to match with video
+   } */
+.displayClass {
+  display: none;
+}
+.block {
+  display: block;
+}
+#link {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.date {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.centerClass {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+  background-color: lightblue;
+}
+
+#seagalVideo {
+  width: 315px;
+  height: 420;
+  margin: auto;
+}
